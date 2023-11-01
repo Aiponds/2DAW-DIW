@@ -1,8 +1,4 @@
 /* FUENTE: https://freefrontend.com/bootstrap-galleries/*/
-:root {
-    --main-color: #ff1016;
-    --main-color-darkened: #c00006;
-}
 *{
 	padding:0;
 	margin:0;
@@ -15,7 +11,6 @@
 section{
     padding: 50px 0;
 }
-
 /*	gallery */
 
 .gallery-title{
@@ -53,7 +48,7 @@ section{
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 20px;
+    padding: 10px;
 	overflow:hidden;
 	color:#fff;
 	top:0;
@@ -66,9 +61,20 @@ section{
 	display:block;
    -webkit-transition: 2s;
     transition: 2s;
+    border-radius: 15px;
 }
+/* Cambio el tamaño de las imagenes de la galería*/
 .img-fluid {
-    max-width: 250px !important;
-
+    max-width: 240px !important;
+    max-height: 260px !important;
 }
-/*	end gallery */
+/* creo una clase contenedor propia para alinear los objetos de la galería*/
+.contenedor {
+    justify-content: space-evenly;
+}
+/* Cuando sea vista movil, se alinean en el centro los objetos.*/
+@media(width < 564px) {
+    .contenedor {
+        justify-content:center;
+    }
+}
